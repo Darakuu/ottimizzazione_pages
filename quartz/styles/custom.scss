@@ -1,3 +1,16 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+.callout[data-callout="application"] {
+    --callout-color: 193, 239, 193;
+    --callout-icon: lucide-wrench;
+}
+
+.callout[data-callout="definition"] {
+    --callout-color: 160, 30, 40;
+    --callout-icon: lucide-book;
+}
+
+.callout[data-callout="def"] {
+    --callout-color: 160, 30, 40;
+    --callout-icon: lucide-book;
+}

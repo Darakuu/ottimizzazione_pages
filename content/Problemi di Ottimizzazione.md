@@ -1,7 +1,7 @@
 ---
 tags:
   - Ottimizzazione
-  - Ottimizzazione/FirstItinere
+  - Ottimizzazione/ProgLineare
 ---
 # Classificazione
 
@@ -10,9 +10,15 @@ tags:
 - Game Theory: problemi con tanti decisori, ognuno vuole max profitto
 - Ottimizzazione stocastica: problemi con dati incerti
 
-I problemi di ottimizzazione hanno una struttura comune: un obiettivo e delle restrizioni.
-L'obiettivo è il criterio di scelta da seguire, le restrizioni sono i vincoli o le limitazioni delle possibili scelte.
-**Ottimizzare** vuol dire la scelta migliore per soddisfare l'obiettivo, rispettando le restrizioni.
+I problemi di ottimizzazione hanno una struttura comune: un obiettivo e delle restrizioni. 
+
+
+L'obiettivo è il criterio di scelta da seguire, le restrizioni sono i vincoli o le limitazioni delle possibili scelte. 
+
+
+**Ottimizzare** vuol dire la scelta migliore per soddisfare l'obiettivo, rispettando le restrizioni. 
+
+
 
 # Ottimizzazione Matematica
 

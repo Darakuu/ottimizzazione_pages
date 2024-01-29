@@ -35,3 +35,8 @@ Questa pagina funge da indice.
 
 - [[Condizioni di Ottimalità]]
 - [[Metodi risolutivi per l'ottimizzazione vincolata e non vincolata]]
+
+Tags per ricerca veloce:
+- #Ottimizzazione/ProgLineare
+- #Ottimizzazione/PLI 
+- #Ottimizzazione/PNL

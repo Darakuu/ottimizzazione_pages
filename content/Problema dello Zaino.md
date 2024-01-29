@@ -1,5 +1,5 @@
 ---
 tags:
   - Ottimizzazione
-  - Ottimizzazione/ProgLineare
+  - Ottimizzazione/PLI
 ---

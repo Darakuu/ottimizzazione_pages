@@ -9,6 +9,8 @@ Non intendono e non vogliono sostituire libri, slide ufficiali e quant'altro. 
 
 Questa pagina funge da indice.
 
+**ASPETTATEVI MOLTI, MOLTI DISEGNI / IMMAGINI / DIAGRAMMI**.
+
 (indice wip, da raffinare):
 
 ## Programmazione Lineare
@@ -31,5 +33,5 @@ Questa pagina funge da indice.
 
 ## Programmazione Non Lineare
 
-- Condizioni di Ottimalità
-- Metodi risolutivi per l'ottimizzazione vincolata e non vincolata
+- [[Condizioni di Ottimalità]]
+- [[Metodi risolutivi per l'ottimizzazione vincolata e non vincolata]]

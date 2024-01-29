@@ -18,26 +18,29 @@ L'obiettivo è il criterio di scelta da seguire, le restrizioni sono i vincoli o
 
 Un problema di ottimizzazione è del tipo
 
-```start-multi-column
-ID: ID_7b4z
-Number of Columns: 3
-Largest Column: standard
-```
+$$
 
-$min f(x)$
-$x \in X$
+\begin{flalign}
+& min f(x) \\
+& x \in X \\
+\end{flalign}
 
---- column-end ---
-oppure
+$$
 
---- column-end ---
+Oppure:
 
-$max f(x)$
-$x \in X$
+$$
+\begin{flalign}
+& max f(x) \\
+& x \in X \\
+\end{flalign}
+$$
 
---- end-multi-column
-con $X \subseteq \mathbb{R}^n$ regione ammissibile (insieme scelte/ dei vincoli)
-$x \in X$ soluzione ammissibile
-$f:X\to \mathbb{R}$ funzione obiettivo
-	$f(x) = f(x_{1},x_{2},\dots,x_{n})$
+Con: 
+- $X \subseteq \mathbb{R}^n$ regione ammissibile (insieme scelte/ dei vincoli)
+- $x \in X$ soluzione ammissibile
+- $f:X\to \mathbb{R}$ funzione obiettivo
+	- $f(x) = f(x_{1},x_{2},\dots,x_{n})$
+
+
 Ogni problema di massimo può essere scritto come problema di minimo.

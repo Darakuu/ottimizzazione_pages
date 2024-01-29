@@ -9,25 +9,27 @@ Non intendono e non vogliono sostituire libri, slide ufficiali e quant'altro. 
 
 Questa pagina funge da indice.
 
-wip
+(indice wip, da raffinare):
 
+## Programmazione Lineare
 
-> [!def] test callouts personalizzati
-> Contents
+- [[Problemi di Ottimizzazione]]
+- [[Forma Standard]]
+- [[Metodo del Simplesso]]
+- [[Dualità]]
+- 
 
+## Programmazione Lineare Intera
 
-> [!application] 
-> Contents
+- [[Problemi di Ottimizzazione Lineare Intera]]
+- [[Problema del trasporto]]
+- [[Problema dell'assegnamento]]
+- [[Metodo dei piani di taglio]]
+- [[Metodo del Branch and Bound]]
+- [[Problema dello Zaino]]
+- [[Problema del Commesso viaggiatore]]
 
-$inline latex \int _{2}^\infty 5x_{2}\, dx$
+## Programmazione Non Lineare
 
-$$
-\begin{align}
-Multiline \\
-Latex \\
-\begin{bmatrix}
-5  & 2 & 4 & 5 & 7 \\
-2 & 4 & 3  & 2 & 1
-\end{bmatrix}
-\end{align}
-$$
+- Condizioni di Ottimalità
+- Metodi risolutivi per l'ottimizzazione vincolata e non vincolata

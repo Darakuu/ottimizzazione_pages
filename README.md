@@ -1,18 +1,10 @@
-# Quartz v4
+# Appunti di Ottimizzazione📈, A.A 2023/24
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+**VISUALIZZABILI** [QUI (click me!)](https://darakuu.github.io/ottimizzazione_pages/)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+Appunti di Ottimizzazione. Collezione di informazioni raccolte dalle slide e dagli appunti presi a lezione.
+- File Markdown scritti con [Obsidian](https://obsidian.md/)
+- Tutte le formule sono scritte usando Latex, renderizzato con MathJax. Ho creato alcune macro per il plugin interno a Obsidian per velocizzarmi il lavoro;
+- Infine, il sito web è realizzato automaticamente con [Quartz](https://github.com/jackyzha0/quartz)🌱 usando le GitHub Actions incluse.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+<sup><sub>p.s. Ho leggermente modificato il sorgente per aggiungere dei Callouts personalizzati</sub></sup>

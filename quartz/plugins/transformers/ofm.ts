@@ -72,9 +72,6 @@ const calloutMapping = {
   example: "example",
   quote: "quote",
   cite: "quote",
-  definition: "def",
-  def: "def",
-  application: "application"
 } as const
 
 function canonicalizeCallout(calloutName: string): keyof typeof calloutMapping {

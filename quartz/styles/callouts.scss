@@ -107,18 +107,6 @@
     --callout-icon: var(--callout-icon-example);
   }
 
-  &[data-callout="application"] {
-    --color: #c1efc1;
-    --border: #c1efc144;
-    --bg: #c1efc110;
-  }
-
-  &[data-callout="def"] {
-    --color: #a01e28;
-    --border: #a01e2866;
-    --bg: #a01e2811;
-  }
-
   &[data-callout="quote"] {
     --color: var(--secondary);
     --border: var(--lightgray);

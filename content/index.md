@@ -12,16 +12,19 @@ Questa pagina funge da indice.
 **ASPETTATEVI MOLTI, MOLTI DISEGNI / IMMAGINI / DIAGRAMMI**.
 
 (indice wip, da raffinare):
-
 ## Programmazione Lineare
+---
 
 - [[Problemi di Ottimizzazione]]
-- [[Forma Standard]]
+- [[Metodo Grafico per la programmazione Lineare]]
+	- [[Geomtria della programmazione lineare]]
+- [[Algebra della programmazione lineare]]
+	- [[Forma Standard]]
 - [[Metodo del Simplesso]]
 - [[Dualità]]
-- 
 
 ## Programmazione Lineare Intera
+---
 
 - [[Problemi di Ottimizzazione Lineare Intera]]
 - [[Problema del trasporto]]
@@ -32,8 +35,10 @@ Questa pagina funge da indice.
 - [[Problema del Commesso viaggiatore]]
 
 ## Programmazione Non Lineare
+---
 
 - [[Condizioni di Ottimalità]]
+- [[Condizioni KKT]]
 - [[Metodi risolutivi per l'ottimizzazione vincolata e non vincolata]]
 
 Tags per ricerca veloce:

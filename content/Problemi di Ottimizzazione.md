@@ -42,6 +42,7 @@ $$
 \end{flalign}
 $$
 
+
 Con: 
 - $X \subseteq \mathbb{R}^n$ regione ammissibile (insieme scelte/ dei vincoli)
 - $x \in X$ soluzione ammissibile

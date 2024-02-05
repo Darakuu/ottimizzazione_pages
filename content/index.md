@@ -10,8 +10,6 @@ Non intendono e non vogliono sostituire libri, slide ufficiali e quant'altro. 
 Questa pagina funge da indice.
 
 **ASPETTATEVI MOLTI, MOLTI DISEGNI / IMMAGINI / DIAGRAMMI**.
-
-(indice wip, da raffinare):
 ## Programmazione Lineare
 ---
 

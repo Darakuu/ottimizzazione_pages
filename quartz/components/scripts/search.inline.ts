@@ -163,13 +163,11 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   let previewInner: HTMLDivElement | undefined = undefined
   const results = document.createElement("div")
   results.id = "results-container"
-  results.style.flexBasis = enablePreview ? "min(30%, 450px)" : "100%"
   appendLayout(results)
 
   if (enablePreview) {
     preview = document.createElement("div")
     preview.id = "preview-container"
-    preview.style.flexBasis = "100%"
     appendLayout(preview)
   }
 
@@ -308,12 +306,27 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     itemTile.classList.add("result-card")
     itemTile.id = slug
     itemTile.href = resolveUrl(slug).toString()
-    itemTile.innerHTML = `<h3>${title}</h3>${htmlTags}<p class="preview">${content}</p>`
+    itemTile.innerHTML = `<h3>${title}</h3>${htmlTags}${
+      enablePreview && window.innerWidth > 600 ? "" : `<p>${content}</p>`
+    }`
+    itemTile.addEventListener("click", (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+      hideSearch()
+    })
 
     const handler = (event: MouseEvent) => {
       if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
       hideSearch()
     }
+
+    async function onMouseEnter(ev: MouseEvent) {
+      if (!ev.target) return
+      const target = ev.target as HTMLInputElement
+      await displayPreview(target)
+    }
+
+    itemTile.addEventListener("mouseenter", onMouseEnter)
+    window.addCleanup(() => itemTile.removeEventListener("mouseenter", onMouseEnter))
     itemTile.addEventListener("click", handler)
     window.addCleanup(() => itemTile.removeEventListener("click", handler))
 

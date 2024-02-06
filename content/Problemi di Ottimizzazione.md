@@ -26,28 +26,28 @@ Un problema di ottimizzazione è del tipo
 
 $$
 
-\begin{flalign}
+\begin{align}
 & min f(x) \\
 & x \in X \\
-\end{flalign}
+\end{align}
 
 $$
 
 Oppure:
 
 $$
-\begin{flalign}
+\begin{align}
 & max f(x) \\
 & x \in X \\
-\end{flalign}
+\end{align}
 $$
 
 
 Con: 
-- $X \subseteq \mathbb{R}^n$ regione ammissibile (insieme scelte/ dei vincoli)
-- $x \in X$ soluzione ammissibile
-- $f:X\to \mathbb{R}$ funzione obiettivo
-	- $f(x) = f(x_{1},x_{2},\dots,x_{n})$
+- $\large X \subseteq \mathbb{R}^n$ regione ammissibile (insieme scelte/ dei vincoli)
+- $\large x \in X$ soluzione ammissibile
+- $\large f:X\to \mathbb{R}$ funzione obiettivo
+	- $\large f(x) = f(x_{1},x_{2},\dots,x_{n})$
 
 
 Ogni problema di massimo può essere scritto come problema di minimo.

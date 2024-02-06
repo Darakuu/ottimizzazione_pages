@@ -36,6 +36,8 @@ Questa pagina funge da indice.
 - [[Condizioni di Ottimalità]]
 - [[Condizioni KKT]]
 - [[Metodi risolutivi per l'ottimizzazione vincolata e non vincolata]]
+ 
+
 
 Tags per ricerca veloce:
 - #Ottimizzazione/ProgLineare

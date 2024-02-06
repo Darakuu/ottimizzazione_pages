@@ -25,6 +25,7 @@ L'obiettivo è il criterio di scelta da seguire, le restrizioni sono i vincoli o
 Un problema di ottimizzazione è del tipo
 
 $$
+\Large
 
 \begin{align}
 & min f(x) \\
@@ -36,6 +37,8 @@ $$
 Oppure:
 
 $$
+\Large
+
 \begin{align}
 & max f(x) \\
 & x \in X \\

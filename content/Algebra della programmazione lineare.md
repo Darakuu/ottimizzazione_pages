@@ -107,17 +107,27 @@ a_{22} & a_{22} & \dots & a_{2m} & a_{2m+1} & \dots & a_{2n} \\
 a_{m1} & a_{m2}  & \dots  & a_{mm} &  a_{mm+1} & \dots & a_{mn} \\
 \end{array}
 
-$$ 
- 
-
-
-
 $$
 
-\textcolor{red}{B} \qquad\qquad \qquad\qquad\textcolor{green}{N}
-
-$$
 
 Supponiamo che la matrice B sia fatta con le prime $m$ colonne di $A$. 
 
+Difatti, $B$ è quadrata: $B \in\mathbb{R}^{m+m}$, le altre colonne di $A$ formano la matrice **non di base** $N\in\mathbb{R}^{m+(n-m)}$. 
+
+
+La matrice $A=[B,N]$ si partiziona quindi in $B$ e $N$, ed anche il vettore $x$ si partiziona in:
+$x=(x_{B},x_{N})$:
+- $x_{B}=$ componenti associate alla colonna di $B$;
+- $x_{N}=$ componenti associate alla colonna di $N$
+
+Il sistema $Ax=b$ allora si scrive:
+
+- $Bx_{B}+Nx_{N}=b$
+- $x_{B}=B^{-1}b-B^{-1}Nx_{N}$
+
+La matrice B è invertibile, perché composta da colonne linearmente indipendenti. Per questo possiamo moltiplicare a sinistra per $B^{-1}$
+
+
+
+Per trovare un vertice la scelta naturale è porre WIP
 

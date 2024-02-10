@@ -15,7 +15,7 @@ Questa pagina funge da indice.
 - [[Metodo Grafico per la programmazione Lineare]]
 	- [[Geometria della programmazione lineare]]
 - [[Algebra della programmazione lineare]]
-	- [[Forma Standard]]
+	- [[Algebra della programmazione lineare#Forma Standard|Forma Standard]]
 - [[Metodo del Simplesso]]
 - [[Dualità]]
 

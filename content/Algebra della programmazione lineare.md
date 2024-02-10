@@ -97,15 +97,20 @@ Se $\text{rango(A)}=m \implies \text{esistono basi di\ } B$.
 
 Individuata una base B, la matrice si partiziona:
 
-$$
+$$A=
 \begin{array}{cccc:ccc}
 a_{11} & a_{12} & \dots & a_{1m} & a_{1m+1} & \dots & a_{1n}\\ 
 a_{22} & a_{22} & \dots & a_{2m} & a_{2m+1} & \dots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2}  & \dots  & a_{mm} &  a_{mm+1} & \dots & a_{mn} \\
 \end{array}
-$$
+$$ 
+
+
 $$
 \textcolor{red}{B} \qquad\qquad \qquad\qquad\textcolor{green}{N}
 $$
+
+Supponiamo che la matrice B sia fatta con le prime $m$ colonne di $A$. 
+
 

@@ -85,10 +85,13 @@ $$
 \end{align}
 $$
 
-Se ha una soluzione ottima, allora esiste un vertice ottimo. 
 
+> [!tldr] Teorema Fondamentale della PL
+> Se ha una soluzione ottima, allora esiste un vertice ottimo. 
 
 Conseguenza: La soluzione ottima va cercata fra i vertici
+
+
 
 
 

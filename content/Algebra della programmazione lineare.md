@@ -129,5 +129,33 @@ La matrice B è invertibile, perché composta da colonne linearmente indipendent
 
 
 
-Per trovare un vertice la scelta naturale è porre WIP
+Per trovare un vertice la scelta naturale è porre $x_{1}=x_{2}=0$, cioè porre a zero le **variabili fuori base**. 
+
+
+> [!def] Soluzione di Base
+> Dato il sistema $Bx_{B}+Nx_{N}=b$ si dice **soluzione di base** il vettore $x=(B^{-1}b,0)$, cioè $x_{B}=B^{-1}b$ e $x_{N}=0$
+> (Componenti di base sono date da $B^{-1}b$ e quelle fuori base sono nulle).
+
+
+- Se $x_{B}\geq 0$ la soluzione di base si dice **ammissibile**.
+- Se qualche componente di base è nulla, si dice **degenere**
+
+
+> [!tldr] Teorema 1
+> Dato il poliedro $P=\{ x \in X: Ax=b,x\geq 0 \}$
+> $x \in P$ è un vertice se e solo se è una soluzione di base ammissibile
+
+- Per il [[Geometria della programmazione lineare#Teorema Fondamentale della PL|Teorema Fondamentale della PL]] $\implies$ bisogna cercare l'ottimo tra i vertici;
+- Per il Teorema 1 appena definito $\implies$ bisogna cerca l'ottimo tra le soluzioni di base ammissibile.
+
+
+> [!question] Quante soluzioni di base ammissibile ci sono?
+> Il numero di sol di base è legato al numero di basi B.
+> Possiamo estrarre da A $\binom{n}{m}$ sottomatrici di ordine m.
+> Fra queste sottomatrici, ve ne sono alcune non invertibili, e alcune che generano soluzioni di base non ammissibile.
+> Quindi, il numero di soluzioni di base è al più $\boxed{\binom{n}{m}}$
+
+Questa è la base del [[Metodo del Simplesso]]
+
+
 

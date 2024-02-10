@@ -2,7 +2,6 @@
 tags:
   - Ottimizzazione
   - Ottimizzazione/ProgLineare
-  - Algoritmi/SecondaProva
 ---
 Cerchiamo di esprimere il concetto di vertice in modo algebrico, sfruttando la struttura di vincolo.
 
@@ -44,4 +43,69 @@ Ogni problema di PL può essere scritto in FS.
 
 # Forma Standard e Vertici
 
-Partendo da un esempio:
+Partendo da un esempio, consideriamo il poliedro:
+
+$$
+\begin{align} \\
+ & x_{1}+2x_{2}\leq 10  &  & \qquad x_{1}+2x_{2}+x_{3}=10 \\
+ & 2x_{1}-3x_{2}\leq 6  & \overset{\text{FS}}{\implies} &\qquad 2x_{1}-3x_{2}+x_{4}=6   \\
+ & x_{1}+x_{2}\leq 9  &  &\qquad x_{1}+x_{2}+x_{5}=9 \\
+ & x_{1},x_{2}\geq 0 &  & \qquad x_{i}\geq 0, \quad i=1,\dots,5
+\end{align}
+$$
+
+Se poniamo $x_{1}=x_{2}=0$ Troviamo la soluzione $(0,0,10,6,9)$, le componenti sono $\geq 0\implies$ è un vertice.
+
+Generalizzando l'esempio, consideriamo: 
+
+
+$$
+\begin{align} \\
+
+& minC^Tx  \\
+& Ax \leq b\\
+& x\geq 0
+\end{align}
+$$
+
+con:
+- $\large x \in \mathbb{R}^{m+n}$
+- $\large b \in \mathbb{R}^m$
+- $\large \text{rango(A)}=m$
+
+E richiediamo che $m<n$.
+
+
+> [!question]- Perché?
+> - Se $m=n$ vuol dire che il sistema $Ax=b$ ha un'unica soluzione, cioè nella regione ammissibile c'è un solo punto, e quindi non c'è alcuna ottimizzazione da effettuare, non avendo alcuna altra scelta.
+> - Se $m>n$ vuol dire che ci sono dei vincoli in eccesso, ridondanti.
+
+
+## Per trovare i vertici...
+
+- Annulliamo n-m variabili;
+- Risolviamo il sistema nelle rimanenti variabili;
+- Se le variabili sono tutte $\geq 0$, abbiamo un vertice.
+
+Dobbiamo però capire come scegliere le variabili da annullare.
+
+
+> [!def] Base Vettoriale
+> Data una matrice $A \in \mathbb{R}^{m+n}$ una base $B$ è una sottomatrice di $A$ formata da $m$ colonne linearmente indipendenti.
+
+Se $\text{rango(A)}=m \implies \text{esistono basi di\ } B$.
+
+Individuata una base B, la matrice si partiziona:
+
+$$
+\begin{array}{cccc:ccc}
+a_{11} & a_{12} & \dots & a_{1m} & a_{1m+1} & \dots & a_{1n}\\ 
+a_{22} & a_{22} & \dots & a_{2m} & a_{2m+1} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2}  & \dots  & a_{mm} &  a_{mm+1} & \dots & a_{mn} \\
+\end{array}
+$$
+$$
+\textcolor{red}{B} \qquad\qquad \qquad\qquad\textcolor{green}{N}
+$$
+

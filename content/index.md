@@ -12,6 +12,7 @@ Questa pagina funge da indice.
 ---
 
 - [[Problemi di Ottimizzazione]]
+	- [[Problemi di Ottimizzazione#Forma Generale Compressa|Generico Problema di PL]]
 - [[Metodo Grafico per la programmazione Lineare]]
 	- [[Geometria della programmazione lineare]]
 - [[Algebra della programmazione lineare]]

@@ -91,3 +91,16 @@ Valgono le ipotesi:
 - Additività: si sommano i contributi delle variabili;
 - Proporzionalità: ogni variabile dà un contributo proporzionale a se stessa;
 - Continuità: Le variabili sono reali.
+
+### Forma Generale Compressa
+
+$$
+\begin{align} \\
+
+& minC^Tx  \\
+& Ax \leq b\\
+& x\geq 0 \\
+
+
+\end{align}
+$$

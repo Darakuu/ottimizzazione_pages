@@ -108,10 +108,14 @@ a_{m1} & a_{m2}  & \dots  & a_{mm} &  a_{mm+1} & \dots & a_{mn} \\
 \end{array}
 
 $$ 
+ 
+
 
 
 $$
+
 \textcolor{red}{B} \qquad\qquad \qquad\qquad\textcolor{green}{N}
+
 $$
 
 Supponiamo che la matrice B sia fatta con le prime $m$ colonne di $A$. 

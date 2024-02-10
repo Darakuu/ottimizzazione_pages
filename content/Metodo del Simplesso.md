@@ -139,7 +139,7 @@ $$
 
 > [!def] Criterio di Uscita
 > Esce dalla base la variabile $x_{k}$ dove $k$ è l'indice cui corrisponde il minimo dei rapporti.
-> $\theta= \dfrac{\bar{b}_{k}}{\bar{a}_{kh}} = min\left\{  \dfrac{\bar{b}_{i}}{\bar{a}_{ih}},a_{ih}>0,i=1,\dots,m  \right\}$
+> $\theta= \dfrac{\bar{b}_{k}}{\bar{a}_{kh}} = min\left\{  \dfrac{\bar{b}_{i}}{\bar{a}_{ih}}:a_{ih}>0,i=1,\dots,m  \right\}$
 
 La funzione migliora del valore $|\bar{c}_{h}|\cdot \theta$, e la variabile $x_{h}$ entra con valore $\theta$.
 
@@ -148,3 +148,33 @@ Questo valore è infatti il valore additivo $\bar{c}_{h}x_{h}$, visto nel criter
 # Schema del Metodo del Simplesso
 
 Preparati, da qui in poi partono gli esempi grafici.
+
+Innanzitutto, si considera la [[Algebra della programmazione lineare#Forma Standard|Forma Standard]] del problema:
+
+1. Si sceglie una base B (matrice $m\times m$ con Det. $\neq 0$), e si calcola la soluzione di base $x=(B^{-1}b,0)$
+2. Se i costi ridotti delle variabili fuori base sono $\geq 0 \implies STOP$, la soluzione è ottima (**Test di Ottimalità**)
+3. Se c'è un costo ridotto $\bar{c}_{h}<0$, quindi negativo (per il **criterio di entrata**), e gli elementi della colonna $h$ della matrice $A$ sono $\leq 0\implies STOP$, il problema non è limitato (**Test di Illimitatezza**)
+4. Si calcola:
+	- $\theta=min\left\{  \dfrac{\bar{b}_{i}}{\bar{a}_{ih}}:a_{ih}>0,i=1,\dots,m \right\}$ 
+	- e sia $\theta$ raggiunto per $i=k$ (**Criterio di uscita**)
+5. Si cambia base:
+	- $B'=B \cup \{ A_{h} \}\backslash\{ A_{k} \}$ 
+
+## Cambio Base: Operazione Pivotale
+
+Adottiamo la forma Tableau del metodo del simplesso:
+
+--WIP Schema
+
+Soluzione Base Ammissibile (SAB) corrente:
+
+$\Large \underbrace{ x_{1}=\bar{b}_{1},x_{2}=\bar{b}_{2},\dots,x_{m}=\bar{b}_{m}, }_{ \text{Variabili di Base} }\quad,\quad \underbrace{ \bar{x}_{m+1}=\dots=\bar{x}_{n}=0 }_{ \text{Variabili fuori base che sono zero} }$
+
+- Se $\bar{c}_{h}<0\implies$ entra la variabile $x_{h}$ ,
+- Se il criterio di uscita ha indicato l'indice $k$, esce la variabile $x_{k}$
+
+Dunque la colonna $A_h$ entra nella matrice di Base al posto della colonna $A_{k}$.
+
+L'elemento $\large \bar{a}_{kh}$ si chiama $\text{PIVOT}$ o perno della trasformazione, e deve essere $\neq 0$.
+
+

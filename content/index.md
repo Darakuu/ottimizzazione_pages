@@ -7,13 +7,13 @@ Non intendono e non vogliono sostituire libri, slide ufficiali e quant'altro. 
 
 Questa pagina funge da indice.
 
-**ASPETTATEVI MOLTI, MOLTI DISEGNI / IMMAGINI / DIAGRAMMI**.
+**ASPETTATEVI MOLTI, MOLTI DISEGNI / DIAGRAMMI / IMMAGINI**.
 ## Programmazione Lineare
 ---
 
 - [[Problemi di Ottimizzazione]]
 - [[Metodo Grafico per la programmazione Lineare]]
-	- [[Geomtria della programmazione lineare]]
+	- [[Geometria della programmazione lineare]]
 - [[Algebra della programmazione lineare]]
 	- [[Forma Standard]]
 - [[Metodo del Simplesso]]

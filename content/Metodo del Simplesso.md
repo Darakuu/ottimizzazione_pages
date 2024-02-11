@@ -239,7 +239,7 @@ $$
 
 Inoltre, se i vincoli sono tutti di tipo $\leq$ i costi ridotti coincidono con i coefficienti delle variabili della f.o. 
 
-- Notiamo che ci sono 2 costi ridotti negativi. In questo caso, il **criterio d'entrata** sceglie quello con indice minore (cioè quello trovato prima).
+- Notiamo che ci sono 2 costi ridotti negativi. In questo caso, il **criterio d'entrata** sceglie quello con indice minore (cioè quello trovato prima).  Questa scelta è definita dalla [[Convergenza del Metodo#Regola di Bland|Regola di Bland]].
 - Per la variabile uscente, usiamo il criterio del rapporto. In questo caso calcoliamo:
 	- $\Large min\ \left\{ \dfrac{3}{1}, \dfrac{4}{1}   \right\}\implies3$
 - Il rapporto minimo è pertanto in corrispondenza della seconda riga, cioè della variabile $x_{5}$, la variabile uscente.
@@ -369,6 +369,8 @@ $$
 - Il valore ottimo della funzione obiettivo è dunque $-20$.
 
 Questo conclude l'esempio.
+
+- Nel caso in cui i costi ridotti siano tutti strettamente positivi ($>0$), allora per [[Convergenza del Metodo#Unicità Soluzione|Unicità della soluzione]], la SAB corrente sarebbe l'unica soluzione ottima.
 
 # Convergenza del Metodo
 

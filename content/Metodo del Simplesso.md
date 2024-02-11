@@ -2,6 +2,7 @@
 tags:
   - Ottimizzazione
   - Ottimizzazione/ProgLineare
+  - Ottimizzazione/Simplesso
 ---
 # Preliminari al Metodo del Simplesso
 
@@ -164,7 +165,10 @@ Innanzitutto, si considera la [[Algebra della programmazione lineare#Forma Stand
 
 Adottiamo la forma Tableau del metodo del simplesso:
 
---WIP Schema
+> [!example]- Tableau simplesso
+> ![[Metodo del Simplesso-20240211153535519.png]]
+>
+
 
 Soluzione Base Ammissibile (SAB) corrente:
 
@@ -175,6 +179,200 @@ $\Large \underbrace{ x_{1}=\bar{b}_{1},x_{2}=\bar{b}_{2},\dots,x_{m}=\bar{b}_{m}
 
 Dunque la colonna $A_h$ entra nella matrice di Base al posto della colonna $A_{k}$.
 
-L'elemento $\large \bar{a}_{kh}$ si chiama $\text{PIVOT}$ o perno della trasformazione, e deve essere $\neq 0$.
+L'elemento $\large \bar{a}_{kh}$ si chiama $\text{PIVOT}$ o perno della trasformazione, e deve essere sempre $\neq 0$. 
 
+La colonna h-esima si trasforma nella colonna k-esima con le seguenti operazioni:
+
+
+> [!todo] Operazioni di trasformazione colonna
+> 1. La riga $h$ si divide per il perno $\bar{a}_{kh}$ (motivo della condizione $\bar{a}_{kh}\neq 0$);
+> 2. Alle altre righe si aggiunge un opportuno multiplo della riga $h$ del perno modificata in modo da annullare tutti gli elementi
+
+
+> [!success] Esempio in LateX
+
+$$
+\begin{align}
+min(& x_{1}-2x_{2}-6x_{3}) \\
+ & x_{1}\leq 2 \\
+ & x_{2}\leq 3 \\
+ & x_{3}\leq 3 \\
+ & x_{1}+x_{2}+x_{3}\leq 4 \\
+ & x_{i}\geq 0,\quad i=1,2,3 \\
+\end{align}
+$$
+
+Si porta il problema in forma standard
+
+$$
+\begin{align}
+min(& x_{1}-2x_{2}-6x_{3}) \\
+ & x_{1}+x_{4}= 2 \\
+ & x_{2}+x_{5}= 3 \\
+ & x_{3}+x_{6}= 3 \\
+ & x_{1}+x_{2}+x_{3}+x_{7}= 4 \\
+ & x_{i}\geq 0,\quad i=1,\dots,7 \\
+\end{align}
+$$
+
+Abbiamo aggiunto una base B con le variabili di scarto: $x_{4},x_{5},x_{6},x_{7}$ sono variabili di base, e la matrice B in questo caso è una matrice identità. 
+
+Questo perché se i vincoli sono tutti $\leq$ le variabili scarto diventano variabili di base.
+
+![[Metodo del Simplesso-20240211160454386.png|512]]
+
+La SAB Corrente sarà:
+$$
+
+SAB=
+\begin{align}
+\boxed{ 
+ \begin{matrix}
+& x_{1}=0 & x_{2}=0 & x_{3}=0 \\
+& x_{4}=2 & x_{5}=3 & x_{7} = 3 & x_{7}=4
+\end{matrix}
+}
+\end{align}
+$$
+- Ricordiamo che $SAB=(B^{-1}b,0)$, in notazione vettoriale, dove $B^{-1}b:$ vettore delle $m$ componenti in base, mentre $0:$ sarebbe il vettore delle $n-m$ componenti fuori base
+- Se $B=I$ le componenti di base della SAB sono i termini noti.
+
+Inoltre, se i vincoli sono tutti di tipo $\leq$ i costi ridotti coincidono con i coefficienti delle variabili della f.o. 
+
+- Notiamo che ci sono 2 costi ridotti negativi. In questo caso, il **criterio d'entrata** sceglie quello con indice minore (cioè quello trovato prima).
+- Per la variabile uscente, usiamo il criterio del rapporto. In questo caso calcoliamo:
+	- $\Large min\ \left\{ \dfrac{3}{1}, \dfrac{4}{1}   \right\}\implies3$
+- Il rapporto minimo è pertanto in corrispondenza della seconda riga, cioè della variabile $x_{5}$, la variabile uscente.
+- In sunto: **Entra** $x_{2}$, **Esce** $x_{5}$, l'incrocio tra la colonna della variabile **entrante** e la riga di quella **uscente**
+
+![[Metodo del Simplesso-20240211161519729.png|512]]
+
+### Operazioni sulle righe
+
+La colonna 2 deve dividere la colonna 5.
+
+$$
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+1
+\end{pmatrix}
+\ \LARGE /\ \normalsize  
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+0 \\
+
+\end{pmatrix}
+ 
+$$
+
+> [!todo] Procedura
+
+1. Il perno vale 1, quindi non ci sono modifiche da fare.
+	1. Se fosse $\neq 1$, bisognerebbe dividere tutta la riga del perno per il perno stesso.
+2. Operiamo sull'ultima riga, generiamo una nuova riga $R_{4}'=R_{4}-R_{2}$
+
+$$
+\begin{align}
+& (1\ 1\ 1\ 0\ \quad \ 0\  0\ 1\ 4) \\
+-\ & (0\ 1\ 0\ 0\ \quad \ 1\ 0\ 0\ 3) \\
+\hline \\
+=\ & (1\ 0\ 1\ 0\ -1\ 0\ 1\ 3)
+\end{align}
+$$
+
+3. Il costo ridotto della nuova variabile di base $x_{2}$ deve fare zero: $R_{5}'=R_{5}+2R_{2}$
+$$
+
+\begin{align}
+& (1\ -2\ -6\ 0\ 0\ 0\ 0\ 0) \\
++\ 2 & (0\ \quad \ 1\ \quad \ 0\ 0\ 1\ 0\ 0\ 3) \\
+\hline \\
+=\ & (1\ \quad \ 0\ -6\ 0\ 2\ 0\ 1\ 3)
+\end{align}
+
+$$
+
+La nuova tabella, con relativa nuova SAB, sarà quindi:
+
+![[Metodo del Simplesso-20240211163246611.png|512]]
+
+$$
+
+SAB=
+\begin{align}
+\boxed{ 
+ \begin{matrix}
+& x_{1}=0 & \textcolor{red}{x_{2}=3} & x_{3}=0 \\
+& x_{4}=2 & \textcolor{red}{x_{5}=0} & x_{6} = 3 & x_{7}=4
+\end{matrix}
+}
+\end{align}
+$$
+
+Dato che abbiamo ancora un costo ridotto negativo ($-6$), si continua con l'algoritmo.
+- Entra $x_{3}$, ed esce $x_{7}$
+- Si hanno le seguenti trasformazioni:
+	- $R_{1}'=R_{1}$
+	- $R_{2}'=R_{2}$
+	- $R_{3}'=R_{3}-R_{4}$
+	- $R_{5}'=R_{5}+6R_{4}$
+
+Otteniamo un'altra tabella e nuova SAB:
+
+![[Metodo del Simplesso-20240211164608413.png|512]]
+
+$$
+
+SAB=
+\begin{align}
+\boxed{ 
+ \begin{matrix}
+& x_{1}=0 & x_{2}=3 & \textcolor{red}{x_{3}=1} \\
+& x_{4}=2 & x_{5}=0 & \textcolor{red}{x_{6} = 2 } & \textcolor{red}{x_{7}=0}
+\end{matrix}
+}
+\end{align}
+$$
+
+Purtroppo dai calcoli abbiamo un nuovo costo negativo in $x_{5}$, per cui:
+- Entra $x_{5}$, ed esce $x_{6}$, perché ha il rapporto minimo rispetto alla riga $x_{2}$
+- E si hanno le seguenti trasformazioni:
+	- $R_{1}'=R_{1}$
+	- $R_{2}'=R_{2}-R_{3}$
+	- $R_{4}'=R_{4}+R_{3}$
+	- $R_{5}'=R_{5}+4R_{3}$
+- Reminder: finora non è stato necessario toccare la riga del pivot perché abbiamo avuto fortuna e tutti i pivot sono $1$, altrimenti avremmo dovuto dividere per il pivot.
+
+Otteniamo la tabella finale con SAB ottima:
+
+
+
+
+$$
+
+\text{SAB Ottima}=
+\begin{align}
+\boxed{ 
+ \begin{matrix}
+& x_{1}=0 & x_{2}=1 & x_{3}=3 \\
+& x_{4}=2 & x_{5}=2 & x_{6} = 0 & {x_{7}=0}
+\end{matrix}
+}
+\end{align}
+$$
+
+- Questa è la tabella finale perché tutti i costi ridotti sono $\geq 0$, quindi ci fermiamo per il Test di Ottimalità.
+- Il valore ottimo della funzione obiettivo è dunque $-20$.
+
+Questo conclude l'esempio.
+
+# Convergenza del Metodo
+
+Continua in:
+
+[[Convergenza del Metodo]]
 

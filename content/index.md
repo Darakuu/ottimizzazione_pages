@@ -18,7 +18,10 @@ Questa pagina funge da indice.
 - [[Algebra della programmazione lineare]]
 	- [[Algebra della programmazione lineare#Forma Standard|Forma Standard]]
 - [[Metodo del Simplesso]]
+	- [[Convergenza del Metodo]]
+	- [[Metodo delle Due Fasi]]
 - [[Dualità]]
+	- [[Scarti Complementari]]
 
 ## Programmazione Lineare Intera
 ---
@@ -44,3 +47,5 @@ Tags per ricerca veloce:
 - #Ottimizzazione/ProgLineare
 - #Ottimizzazione/PLI 
 - #Ottimizzazione/PNL
+- #Ottimizzazione/Simplesso 
+- #Ottimizzazione/Dualita 

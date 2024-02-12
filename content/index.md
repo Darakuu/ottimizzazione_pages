@@ -23,6 +23,7 @@ Questa pagina funge da indice.
 - [[Dualità]]
 	- [[Tabella Primale Duale]]
 	- [[Scarti Complementari]]
+	- [[Simplesso Duale]]
 
 ## Programmazione Lineare Intera
 ---

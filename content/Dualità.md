@@ -117,3 +117,9 @@ Riassunto dei possibili casi in una tabella:
 > Se uno dei due problemi è illimitato, l'altro è inammissibile.
 
 Continua in [[Scarti Complementari]]
+
+
+# Relazione Ottimalità Primale <-> Ammissibilità Duale
+
+Leggi dopo aver letto [[Scarti Complementari]]
+

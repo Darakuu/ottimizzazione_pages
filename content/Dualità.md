@@ -88,7 +88,7 @@ Allora $y^Tb\leq c^Tx$
 Significato:
 
 
-> [!tldr] Teorema della Dualità debole
+> [!def] Teorema della Dualità debole
 > - La funzione obiettivo primale è un **upper bound** per il valore ottimo duale;
 > - La funzione obiettivo duale è un **lower bound** per il valore ottimo primale;
 
@@ -108,3 +108,12 @@ Riassunto dei possibili casi in una tabella:
 | Ottimo Finito | $\large\textcolor{lightgreen}{\checkmark}$ | $\large\textcolor{red}{\times}$ | $\large\textcolor{red}{\times}$ |
 | Illimitato | $\large\textcolor{red}{\times}$ | $\large\textcolor{red}{\times}$ | $\large\textcolor{lightgreen}{\checkmark}$ |
 | Inammissibile | $\large\textcolor{red}{\times}$ | $\large\textcolor{lightgreen}{\checkmark}$ | $\large\textcolor{lightgreen}{\checkmark}$ |
+
+## Teorema della Dualità Forte
+
+
+> [!def] Teorema della dualità forte
+> Se uno dei due problemi primale o duale ha ottimo finito allora anche l'altro ha ottimo finito, e i valori ottimi delle funzioni obiettivo coincidono.
+> Se uno dei due problemi è illimitato, l'altro è inammissibile.
+
+Continua in [[Scarti Complementari]]

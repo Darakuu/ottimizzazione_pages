@@ -21,6 +21,7 @@ Questa pagina funge da indice.
 	- [[Convergenza del Metodo]]
 	- [[Metodo delle Due Fasi]]
 - [[Dualità]]
+	- [[Tabella Primale Duale]]
 	- [[Scarti Complementari]]
 
 ## Programmazione Lineare Intera

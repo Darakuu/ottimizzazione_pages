@@ -116,12 +116,84 @@ Riassunto dei possibili casi in una tabella:
 > Se uno dei due problemi primale o duale ha ottimo finito allora anche l'altro ha ottimo finito, e i valori ottimi delle funzioni obiettivo coincidono.
 > Se uno dei due problemi è illimitato, l'altro è inammissibile.
 
-Continua in [[Scarti Complementari]]
-
-
-# Relazione Ottimalità Primale <-> Ammissibilità Duale
+# Relazione Ottimalità Primale < - > Ammissibilità Duale
 
 Leggi dopo aver letto: 
-![[Scarti Complementari]]
 
-Sia $x^\star=(B^{-1}b,0)$ la soluzione ottima primale e $y^\star$ la soluzione ottima duale
+> [!todo]- Scarti Complementari
+> ![[Scarti Complementari]]
+
+
+Sia $x^\star=(B^{-1}b,0)$ la soluzione ottima primale e $y^\star$ la soluzione ottima duale.
+
+Risulta $c^Tx^\star=y^{\star T}b$, cioè coincidono i valori ottimi.
+
+$$
+\begin{align}
+c^Tx^\star & = c^T_{B}x^\star_{B}+c^T_{N}x^\star_{N} = \\
+ & =c^T_{B}x^\star_{B} =\\
+&=c^T_{B}B^{-1}b =   \boxed{y^{\star T}b} 
+
+\end{align}
+$$
+
+$y^\star$ deve soddisfare i vincoli duali, cioè: $y^TA\leq c^T$
+
+Sostituendo $y^{\star T}$ con $C^T_{B}B^{-1}$ otteniamo la dimostrazione, e arriviamo al risultato che $y^{\star T}N\leq c^T_{N} \iff c^T_{B}B^{-1}N\leq C^T_{N}\iff \underbrace{ C^T_{N}-C^T_{B}B^{-1}N }_{ \text{Costi Ridotti Var Fuori Base}}\leq 0$, che è la condizione di ottimalità primale.
+
+**Per cui la Ottimalità Primale COINCIDE con l'Ammissibilità Duale** (importantissimo per [[Simplesso Duale]]).
+
+### Calcolo Soluzione Duale
+
+Possiamo usare:
+
+1. Scarti Complementari;
+2. Tabella simplesso del problema primale.
+
+Se il problema primale ha vincolo $Ax\leq b$ si utilizzano le variabili scarto per la [[Algebra della programmazione lineare#Forma Standard|Forma Standard]].
+
+La soluzione ottima si ottiene:
+
+$\large \tilde{c}_{\text{iniziale}}-\bar{c}_{\text{iniziale}}$, dove:
+
+- $\large \tilde{c}_{\text{iniziale}}:$ vettore **coefficienti** della f.o. associati alle variabili in base alla $I$ iterazione;
+- $\large \bar{c}_{\text{iniziale}}:$ vettore dei **costi ridotti** nella tabella finale del simplesso associati alle variabili in base alla $I$ iterazione.
+
+
+> [!success] Esempio Veloce
+
+Dato un problema del tipo:
+$$
+\begin{align}
+min(-2&x_{1}-x_{2}) \\
+2&x_{1}\leq 2 \\
+&x_{2}\leq 1 \\
+ & x_{1}-3x_{2}\leq 1 \\
+ & x_{1,2}\geq 0 \\
+ \\
+\text{In FS}: \\ \\
+
+min(-2&x_{1}-x_{2}) \\
+2&x_{1}+x_{3}= 2 \\
+&x_{2}+x_{4}= 1 \\
+ & x_{1}-3x_{2}+x_{5} 1 \\
+ & x_{1,\dots,5}\geq 0
+\end{align}
+$$
+
+Eseguendo il metodo del simplesso otterremo la soluzione ottima primale:
+
+$(1,1,0,0,3)$ con $x_{1}^\star=1,\ x^\star_{2}=1$ e valore ottimo $f.o.=-3$
+
+e costi ridotti finali: $(0,0,1,1,0,3)$
+
+Calcolando la soluzione duale con la formula definita subito sopra l'esempio abbiamo:
+
+$\text{Soluzione Duale}=(\text{coeff f.o. di }x_{3},x_{4},x_{5})-(\text{costi ridotti finali di }x_{3},x_{4},x_{5})=(0,0,0)-(1,1,0)=(-1,-1,0)$, che è la soluzione ottima duale.
+
+
+> [!info] Osservazione
+> Se il problema primale ha vincoli $Ax\geq b$ la soluzione ottima duale sarà la sottrazione inversa rispetto a quella appena eseguita, cioè:
+> $\large \bar{c}_{\text{iniziale}}-\tilde{c}_{\text{iniziale}}$
+
+![[Simplesso Duale]]

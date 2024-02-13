@@ -34,11 +34,11 @@ $x,y \text{ sono ottimi } \iff:$
 
 Oppure, $\bar{x},\bar{y}$ sono ottimi $\iff$ valgono:
 
-$\require{enclose}\enclose{circle}{1},\require{enclose}\enclose{circle}{2},\require{enclose}\enclose{circle}{3}$  
+$\enclose{circle}{1},\enclose{circle}{2},\enclose{circle}{3}$  
 
 e anche: 
 
-$\require{enclose}\enclose{circle}{4}:$ $\bar{y}^{T}(A\bar{x}-b)=0$
+$\enclose{circle}{4}:$ $\bar{y}^{T}(A\bar{x}-b)=0$
 $\quad\ \  (\bar{y}^TA-c^T)\ \bar{x}=0$
 
 Che significa tutto questo, e soprattutto a che serve? Capiamolo con degli esempi.

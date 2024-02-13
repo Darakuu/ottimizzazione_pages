@@ -35,7 +35,7 @@ $$
 $$
 
 La conversione avviene secondo le regole stabilite dalla: 
-- [[Tabella Primale Duale]]
+ ![[Tabella Primale Duale]]
 
 
 > [!example]- Esempio
@@ -121,5 +121,7 @@ Continua in [[Scarti Complementari]]
 
 # Relazione Ottimalità Primale <-> Ammissibilità Duale
 
-Leggi dopo aver letto [[Scarti Complementari]]
+Leggi dopo aver letto: 
+![[Scarti Complementari]]
 
+Sia $x^\star=(B^{-1}b,0)$ la soluzione ottima primale e $y^\star$ la soluzione ottima duale

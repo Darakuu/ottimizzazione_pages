@@ -29,9 +29,10 @@ Questa pagina funge da indice.
 ---
 
 - [[Problemi di Ottimizzazione Lineare Intera]]
-- [[Problema del trasporto]]
-- [[Problema dell'assegnamento]]
+- [[Problema del trasporto]] -wip
+- [[Problema dell'assegnamento]] -wip
 - [[Metodo dei piani di taglio]]
+	- [[Metodo dei Tagli di Gomory]]
 - [[Metodo del Branch and Bound]]
 - [[Problema dello Zaino]]
 - [[Problema del Commesso viaggiatore]]

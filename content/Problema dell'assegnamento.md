@@ -46,5 +46,17 @@ La matrice dei coefficienti è **Totalmente Unimodulare**
 
 
 > [!tldr] Proposizione
-> Dato il poliedro
+> Dato il poliedro $\{ x \in \mathbb{R}^n: Ax=b, x\geq 0 \}$ con A matrice tot. unimodulare, e b intero $\implies$ poliedro ha solo vertici interi
 
+Possiamo quindi risolvere il problema rilassato con il vincolo $x_{ij} \in [0,1]$ (insieme agli altri vincoli diventa poi solo) $x_{ij}\geq 0$)
+
+Non è utile usare il simplesso perché il poliedro ha vertici fortemente degeneri, si usa infatti un algoritmo specifico:
+
+![[Algoritmo Ungherese]]
+
+
+## Assegnamento su Grafo Bipartito
+
+Il problema dell'assegnamento si può vedere su un grafo bipartito completo. Siano noti i costi $c_{ij}$ su tutti gl iarchi e si cerca un abbinamento tra gli elementi dei due insiemi di costo minimo.
+
+![[Pasted image 20240214183550.png]]

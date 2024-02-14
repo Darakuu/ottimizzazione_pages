@@ -6,24 +6,28 @@ tags:
 # Programmazione Lineare Intera
 
 Consideriamo problemi del tipo:
-
+## Problema PLI
 $$
-\begin{align} \\
 
-& minC^Tx  \\
-& Ax \leq b\\
+\begin{align}
+& minC^Tx \\ 
+& \begin{rcases}
+& Ax = b\\
 & x\geq 0 \\
-& \boxed{x \text{ intero}}
-
-
+& \boxed{x \text{ intero}}\  \\
+\end{rcases} \ X
 \end{align}
+
 $$
 
+
+## Osservazione
 
 > [!info] Osservazione
 > La regione ammissibile di un problema intero **non è** convessa.
 > In generale possono esservi alcune variabili continue e alcune intere. Si parla in tal caso di PLI mista (che non trattiamo)
 
+## Esempio
 
 > [!success]- Esempio Grafico PLI
 > ![[09-pligraf.png]]

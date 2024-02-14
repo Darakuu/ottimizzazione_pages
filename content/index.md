@@ -35,6 +35,8 @@ Questa pagina funge da indice.
 	- [[Metodo dei Tagli di Gomory]]
 - [[Metodo del Branch and Bound]]
 - [[Problema dello Zaino]]
+- [[Problema dell'assegnamento]]
+	- [[Algoritmo Ungherese]]
 - [[Problema del Commesso viaggiatore]]
 
 ## Programmazione Non Lineare

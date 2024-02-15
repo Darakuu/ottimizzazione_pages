@@ -30,7 +30,7 @@ Questa pagina funge da indice.
 
 - [[Problemi di Ottimizzazione Lineare Intera]]
 - [[Problema del trasporto]] -wip
-- [[Problema dell'assegnamento]] -wip
+- [[Problema dell'assegnamento]]
 - [[Metodo dei piani di taglio]]
 	- [[Metodo dei Tagli di Gomory]]
 - [[Metodo del Branch and Bound]]
@@ -42,9 +42,13 @@ Questa pagina funge da indice.
 ## Programmazione Non Lineare
 ---
 
+- [[Programmazione Non Lineare]]
 - [[Condizioni di Ottimalità]]
 - [[Condizioni KKT]]
+- [[Schema Condizioni Ottimalità]]
 - [[Metodi risolutivi per l'ottimizzazione vincolata e non vincolata]]
+	- [[Metodo di Newton]]
+	- [[Discesa del Gradiente]]
  
 
 
@@ -54,3 +58,6 @@ Tags per ricerca veloce:
 - #Ottimizzazione/PNL
 - #Ottimizzazione/Simplesso 
 - #Ottimizzazione/Dualita 
+
+Pagina All-in-One per ripasso veloce:
+- [[All-In-One]]

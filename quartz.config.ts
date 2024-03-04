@@ -55,9 +55,9 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],
       }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.Latex({ renderEngine: "mathjax" }),
       Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",
